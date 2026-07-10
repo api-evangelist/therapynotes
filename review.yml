@@ -1,0 +1,83 @@
+aid: therapynotes
+name: TherapyNotes
+review:
+  question: Does TherapyNotes expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-10'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. TherapyNotes exposes no public or partner
+    API of any kind - no REST, no webhooks, and no WebSocket or SSE transport.
+    There is no server-push surface to model. Any real-time behavior (client
+    portal updates, telehealth signaling) is internal to the HIPAA-gated web
+    application and is not a documented, consumable public API.
+findings:
+  summary: |
+    TherapyNotes does not publish a documented public WebSocket API - or any
+    public/partner developer API at all. TherapyNotes is a HIPAA-compliant
+    behavioral-health practice management and EHR platform. Industry writeups
+    describe it as having "zero API," an explicit architectural decision: it
+    cannot be connected to marketing tools, CRMs, billing platforms, data
+    dashboards, or workflow automation (e.g., Zapier). Client, appointment,
+    clinical-note, and billing data live in the browser application and manual
+    exports. The only native "integrations" are one-way calendar sync to Google
+    Calendar, Microsoft Outlook, and iCloud. Third parties (e.g., Supergood,
+    Keragon) offer UNOFFICIAL, screen/automation-based access - these are not
+    TherapyNotes APIs. No REST base URL, no OpenAPI, no webhooks, and no
+    WebSocket (ws:// or wss://) endpoint are documented by TherapyNotes.
+  publicApi: |
+    None. TherapyNotes offers no public or partner developer API. Custom
+    integration work, when done, is a paid professional-services engagement
+    with TherapyNotes, not a self-serve API. Access is gated behind the
+    authenticated, HIPAA-compliant web application.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented by TherapyNotes.
+    - protocol: Webhook
+      scheme: https
+      documented: false
+      note: No webhooks or event callbacks are offered.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere by TherapyNotes as of the review date.
+  endpointsConfirmedRest: []
+  endpointsModeled:
+    - Clients / patients (demographics, insurance, portal) - modeled only, no public endpoints
+    - Appointments / scheduling (native one-way calendar sync only) - modeled only, no public endpoints
+    - Clinical documentation / notes (PHI, in-app only) - modeled only, no public endpoints
+    - Billing / insurance claims / ERA / payments (in-app clearinghouse workflow) - modeled only, no public endpoints
+  thirdPartyUnofficial:
+    - name: Supergood
+      note: Offers a production-grade UNOFFICIAL REST wrapper over TherapyNotes data; not a TherapyNotes-published API.
+    - name: Keragon
+      note: Workflow automation with custom-code/API access; unofficial, not a TherapyNotes-published API.
+sources:
+  - url: https://www.therapynotes.com/features/
+    type: Documentation
+    note: Feature overview - documentation, scheduling, billing, client portal, telehealth. No API mentioned.
+  - url: https://www.therapynotes.com/pricing/
+    type: Pricing
+    note: Per-clinician subscription pricing. No API access tier.
+  - url: https://support.therapynotes.com/hc/en-us
+    type: Documentation
+    note: End-user support center; no developer/API documentation.
+  - url: https://www.ehrsource.com/articles/therapynotes-problems-2026/
+    type: Analysis
+    note: States TherapyNotes "offers no API whatsoever" as an architectural decision; no Zapier/CRM/dashboard connectivity.
+  - url: https://docs.supergood.ai/therapynotes-api/
+    type: Analysis
+    note: Third-party UNOFFICIAL API wrapper - evidence there is no official TherapyNotes API to build against.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket (or any public) API surface exists to document. TherapyNotes
+    is captured as an honest gated stub: capability areas are modeled with
+    endpointsModeled and no endpoints are fabricated. No AsyncAPI, OpenAPI,
+    rate-limits, or finops artifacts were created because there is no public
+    API surface to describe. Real, published subscription pricing was captured
+    under plans/.

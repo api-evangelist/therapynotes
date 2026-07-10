@@ -1,0 +1,120 @@
+aid: therapynotes
+url: https://raw.githubusercontent.com/api-evangelist/therapynotes/refs/heads/main/apis.yml
+name: TherapyNotes
+kind: company
+description: >-
+  TherapyNotes is a HIPAA-compliant practice management and electronic health
+  record (EHR) platform built specifically for behavioral health - therapists,
+  psychologists, psychiatrists, social workers, and group practices. It provides
+  interactive note templates and clinical documentation, scheduling with
+  appointment reminders, a client portal, telehealth, electronic insurance
+  claims and ERA, credit card processing, and TherapyFuel AI tooling. As of this
+  writing TherapyNotes does NOT expose a public or partner developer API,
+  webhooks, or documented programmatic interface; access to client, appointment,
+  clinical-note, and billing data is through the browser application and manual
+  exports only. This entry documents TherapyNotes as an API-relevant provider
+  and honestly models the capability areas a behavioral-health EHR API would
+  cover; the API surfaces below are modeled, not published, and no endpoints are
+  fabricated.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Behavioral Health
+- EHR
+- Practice Management
+- Mental Health
+- Electronic Health Records
+- Medical Billing
+- HIPAA
+- No Public API
+created: '2026-07-10'
+modified: '2026-07-10'
+specificationVersion: '0.19'
+apis:
+- aid: therapynotes:therapynotes-clients-api
+  name: TherapyNotes Clients API (Modeled)
+  tags:
+  - Clients
+  - Patients
+  - Demographics
+  - No Public API
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.therapynotes.com/features/
+  endpointsModeled: true
+  properties:
+  - url: https://www.therapynotes.com/features/
+    type: Documentation
+  description: >-
+    Modeled capability area for managing the client (patient) roster -
+    demographics, contacts, insurance, and portal enrollment. TherapyNotes
+    surfaces this only in its web application; there is no public or partner API,
+    so no base URL or endpoints are published. Listed here for completeness of
+    the behavioral-health EHR capability model, not as an available integration.
+- aid: therapynotes:therapynotes-scheduling-api
+  name: TherapyNotes Scheduling API (Modeled)
+  tags:
+  - Appointments
+  - Scheduling
+  - Calendar
+  - No Public API
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.therapynotes.com/features/
+  endpointsModeled: true
+  properties:
+  - url: https://www.therapynotes.com/features/
+    type: Documentation
+  description: >-
+    Modeled capability area for appointments, recurring schedules, and
+    reminders. TherapyNotes offers native one-way calendar sync to Google
+    Calendar, Microsoft Outlook, and iCloud from within the application, but no
+    programmatic scheduling API. No public endpoints or base URL exist.
+- aid: therapynotes:therapynotes-clinical-documentation-api
+  name: TherapyNotes Clinical Documentation API (Modeled)
+  tags:
+  - Clinical Notes
+  - Documentation
+  - Progress Notes
+  - No Public API
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.therapynotes.com/features/
+  endpointsModeled: true
+  properties:
+  - url: https://www.therapynotes.com/features/
+    type: Documentation
+  description: >-
+    Modeled capability area for interactive clinical note templates - intake,
+    progress notes, treatment plans, and psychiatry documentation. This is
+    PHI-bearing behavioral-health data and is available only inside the
+    HIPAA-gated web application; TherapyNotes publishes no API to read or write
+    it. No endpoints or base URL exist.
+- aid: therapynotes:therapynotes-billing-claims-api
+  name: TherapyNotes Billing and Claims API (Modeled)
+  tags:
+  - Billing
+  - Insurance Claims
+  - ERA
+  - Payments
+  - No Public API
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.therapynotes.com/features/
+  endpointsModeled: true
+  properties:
+  - url: https://www.therapynotes.com/features/
+    type: Documentation
+  description: >-
+    Modeled capability area for medical billing - electronic insurance claims,
+    ERA (electronic remittance advice), superbills, and integrated credit card
+    processing. TherapyNotes runs claims through an internal clearinghouse
+    workflow in-app; it exposes no billing or claims API to third parties. No
+    public endpoints or base URL exist.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/therapynotes-llc
+- type: Website
+  url: https://www.therapynotes.com
+- type: Documentation
+  url: https://support.therapynotes.com/hc/en-us
+- type: Plans
+  url: plans/therapynotes-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

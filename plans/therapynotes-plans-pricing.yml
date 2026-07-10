@@ -1,0 +1,71 @@
+aid: therapynotes-plans-pricing
+name: TherapyNotes Plans and Pricing
+description: >-
+  Published subscription pricing for TherapyNotes, the behavioral-health
+  practice management and EHR platform. Pricing is per clinician per month with
+  unlimited non-clinical users (practice administrators, schedulers, billers) on
+  group accounts. A 30-day free trial is offered. These are the platform
+  subscription plans, NOT API access plans - TherapyNotes does not sell or
+  publish any developer/API plan because it has no public API. Figures below
+  were captured from public pricing pages on 2026-07-10 and may change; confirm
+  at therapynotes.com/pricing.
+url: https://www.therapynotes.com/pricing/
+modelType: subscription
+currency: USD
+billingPeriod: monthly
+freeTrialDays: 30
+plans:
+- name: Solo
+  price: 69
+  unit: per clinician per month
+  description: >-
+    For a single solo clinician. Includes core documentation, scheduling,
+    client portal, and basic telehealth.
+- name: Group
+  price: 79
+  unit: first clinician per month
+  additionalClinicianPrice: 50
+  additionalClinicianUnit: per additional clinician per month
+  description: >-
+    For group practices. First clinician at 79/month, each additional clinician
+    at 50/month, with unlimited non-clinical users (Practice Administrators,
+    Schedulers, and Billers).
+- name: Enterprise
+  price: 79
+  unit: first clinician per month
+  additionalClinicianPrice: 50
+  additionalClinicianUnit: per additional clinician per month
+  minimumUsers: 30
+  description: >-
+    Same rates as the Group plan but requires at least 30 users on the account.
+    Qualifying accounts are assigned a designated account manager.
+addOns:
+- name: Electronic Insurance Claims
+  price: 0.14
+  unit: per claim
+  description: Per-claim fee for electronic insurance claim submission.
+- name: Electronic Remittance Advice (ERA)
+  price: 0.14
+  unit: per ERA
+  description: Per-ERA fee for electronic remittance advice processing.
+- name: Premium Telehealth
+  price: 15
+  unit: per clinician per month
+  description: HD video, screen sharing, and larger group sessions.
+- name: TherapyFuel AI Scribe
+  price: 40
+  unit: per provider per month
+  description: AI-assisted clinical note scribe.
+apiPlans: none
+apiPlansNote: >-
+  TherapyNotes publishes no API access tiers, developer plans, or usage-based
+  API pricing because it does not offer a public or partner developer API.
+notes:
+- Pricing is per clinician; non-clinical staff are unlimited on Group/Enterprise.
+- A 30-day free trial is available with no long-term contract.
+- Add-on fees (claims, ERA, premium telehealth, AI scribe) are billed separately.
+sources:
+- url: https://www.therapynotes.com/pricing/
+  type: Pricing
+- url: https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options
+  type: Pricing
