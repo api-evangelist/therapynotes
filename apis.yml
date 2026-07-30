@@ -16,7 +16,19 @@ description: >-
   and honestly models the capability areas a behavioral-health EHR API would
   cover; the API surfaces below are modeled, not published, and no endpoints are
   fabricated.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: true
+  try_now: false
+  public: false
+  label: Paid (free trial)
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/therapynotes.png
 tags:
 - Behavioral Health
 - EHR
