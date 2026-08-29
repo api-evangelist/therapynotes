@@ -16,6 +16,17 @@ description: >-
   and honestly models the capability areas a behavioral-health EHR API would
   cover; the API surfaces below are modeled, not published, and no endpoints are
   fabricated.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
