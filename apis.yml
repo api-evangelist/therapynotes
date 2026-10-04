@@ -54,6 +54,7 @@ modified: '2026-07-10'
 specificationVersion: '0.23'
 apis:
 - aid: therapynotes:therapynotes-clients-api
+  x-published: false
   name: TherapyNotes Clients API (Modeled)
   tags:
   - Clients
@@ -73,6 +74,7 @@ apis:
     so no base URL or endpoints are published. Listed here for completeness of
     the behavioral-health EHR capability model, not as an available integration.
 - aid: therapynotes:therapynotes-scheduling-api
+  x-published: false
   name: TherapyNotes Scheduling API (Modeled)
   tags:
   - Appointments
@@ -91,6 +93,7 @@ apis:
     Calendar, Microsoft Outlook, and iCloud from within the application, but no
     programmatic scheduling API. No public endpoints or base URL exist.
 - aid: therapynotes:therapynotes-clinical-documentation-api
+  x-published: false
   name: TherapyNotes Clinical Documentation API (Modeled)
   tags:
   - Clinical Notes
@@ -110,6 +113,7 @@ apis:
     HIPAA-gated web application; TherapyNotes publishes no API to read or write
     it. No endpoints or base URL exist.
 - aid: therapynotes:therapynotes-billing-claims-api
+  x-published: false
   name: TherapyNotes Billing and Claims API (Modeled)
   tags:
   - Billing
