@@ -50,7 +50,7 @@ tags:
 - HIPAA
 - No Public API
 created: '2026-07-10'
-modified: '2026-07-10'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: therapynotes:therapynotes-clients-api
@@ -134,6 +134,8 @@ apis:
     workflow in-app; it exposes no billing or claims API to third parties. No
     public endpoints or base URL exist.
 common:
+- url: https://blog.therapynotes.com/rss.xml
+  type: BlogRSS
 - type: VulnerabilityDisclosure
   url: security/therapynotes-vulnerability-disclosure.yml
 - type: DomainSecurity
