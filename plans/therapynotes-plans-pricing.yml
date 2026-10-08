@@ -73,3 +73,31 @@ sources:
   type: Pricing
 - url: https://support.therapynotes.com/hc/en-us/articles/30661380110747-TherapyNotes-Pricing-and-Subscription-Options
   type: Pricing
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units: []
+  plans:
+  - name: Solo
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: Group
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: Enterprise
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods: []
