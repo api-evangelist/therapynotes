@@ -45,6 +45,13 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/therapynotes.png
 tags:
 - Behavioral Health
+- Electronic Health Records
+- Practice Management
+- Mental Health
+- Medical Billing
+- HIPAA
+tags_raw:
+- Behavioral Health
 - EHR
 - Practice Management
 - Mental Health
@@ -59,6 +66,10 @@ apis:
   x-published: false
   name: TherapyNotes Clients API (Modeled)
   tags:
+  - Clients
+  - Patients
+  - Demographics
+  tags_raw:
   - Clients
   - Patients
   - Demographics
@@ -82,6 +93,10 @@ apis:
   - Appointments
   - Scheduling
   - Calendar
+  tags_raw:
+  - Appointments
+  - Scheduling
+  - Calendar
   - No Public API
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.therapynotes.com/features/
@@ -98,6 +113,10 @@ apis:
   x-published: false
   name: TherapyNotes Clinical Documentation API (Modeled)
   tags:
+  - Clinical Notes
+  - Documentation
+  - Progress Notes
+  tags_raw:
   - Clinical Notes
   - Documentation
   - Progress Notes
@@ -118,6 +137,11 @@ apis:
   x-published: false
   name: TherapyNotes Billing and Claims API (Modeled)
   tags:
+  - Billing
+  - Insurance Claims
+  - ERA
+  - Payments
+  tags_raw:
   - Billing
   - Insurance Claims
   - ERA
