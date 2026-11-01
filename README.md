@@ -1,4 +1,4 @@
-# TherapyNotes (therapynotes)
+# TherapyNotes
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,76 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-TherapyNotes is a HIPAA-compliant practice management and electronic health record (EHR) platform built specifically for behavioral health - therapists, psychologists, psychiatrists, social workers, and group practices. It provides interactive clinical note templates and documentation, scheduling with appointment reminders, a client portal, telehealth, electronic insurance claims and ERA, integrated credit card processing, and TherapyFuel AI tooling.
+TherapyNotes is a HIPAA-compliant practice management and electronic health record (EHR) platform built specifically for behavioral health - therapists, psychologists, psychiatrists, social workers, and group practices. It provides interactive note templates and clinical documentation, scheduling with appointment reminders, a client portal, telehealth, electronic insurance claims and ERA, credit card processing, and TherapyFuel AI tooling. As of this writing TherapyNotes does NOT expose a public or partner developer API, webhooks, or documented programmatic interface; access to client, appointment, clinical-note, and billing data is through the browser application and manual exports only. This entry documents TherapyNotes as an API-relevant provider and honestly models the capability areas a behavioral-health EHR API would cover; the API surfaces below are modeled, not published, and no endpoints are fabricated.
 
-## API Access: None (Honest Gated Stub)
+**Areas:** Behavioral Health · Electronic Health Records · Practice Management · Mental Health · Medical Billing · HIPAA
 
-**TherapyNotes does not expose a public or partner developer API.** There is no documented REST API, no webhooks, no WebSocket, no OpenAPI, and no self-serve developer program. Industry analysis describes this as "zero API" - an explicit architectural decision - meaning TherapyNotes cannot be connected directly to marketing tools, CRMs, billing platforms, data dashboards, or workflow automation (e.g., Zapier).
+## TherapyNotes on APIs.io
 
-Client, appointment, clinical-note, and billing data live inside the authenticated, HIPAA-gated web application and manual exports. The only native "integrations" are one-way calendar sync to Google Calendar, Microsoft Outlook, and iCloud. Custom integration work, when available, is a paid TherapyNotes professional-services engagement, not an API.
+Everything profiled for TherapyNotes is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/therapynotes/](https://apis.io/providers/therapynotes/)** — or go straight to one of the APIs or properties below.
 
-Third parties such as **Supergood** and **Keragon** offer *unofficial* programmatic access to TherapyNotes data by automating the application. These are not TherapyNotes-published APIs and are outside TherapyNotes' support; their existence is itself evidence that no official API is available.
+### APIs (4)
 
-This catalog entry therefore documents TherapyNotes as an **honest gated stub**: the capability areas a behavioral-health EHR API would cover are *modeled* (`endpointsModeled: true`) for completeness, but **no endpoints are fabricated** and no OpenAPI, rate-limit, or FinOps artifacts are provided because there is no public API surface to describe.
+- [TherapyNotes Clients API (Modeled)](https://apis.io/apis/therapynotes/therapynotes-clients-api/) — Modeled capability area for managing the client (patient) roster - demographics, contacts, insurance, and portal enrollment. TherapyNotes surfaces this only…
+- [TherapyNotes Scheduling API (Modeled)](https://apis.io/apis/therapynotes/therapynotes-scheduling-api/) — Modeled capability area for appointments, recurring schedules, and reminders. TherapyNotes offers native one-way calendar sync to Google Calendar, Microsoft…
+- [TherapyNotes Clinical Documentation API (Modeled)](https://apis.io/apis/therapynotes/therapynotes-clinical-documentation-api/) — Modeled capability area for interactive clinical note templates - intake, progress notes, treatment plans, and psychiatry documentation. This is PHI-bearing…
+- [TherapyNotes Billing and Claims API (Modeled)](https://apis.io/apis/therapynotes/therapynotes-billing-claims-api/) — Modeled capability area for medical billing - electronic insurance claims, ERA (electronic remittance advice), superbills, and integrated credit card…
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/therapynotes/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/therapynotes/refs/heads/main/apis.yml)
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Behavioral Health
-- EHR
-- Practice Management
-- Mental Health
-- Electronic Health Records
-- Medical Billing
-- HIPAA
-- No Public API
+#### Security (2)
 
-## Timestamps
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Created:** 2026-07-10
-- **Modified:** 2026-07-10
+- [Therapynotes Domain Security](https://apis.io/security/therapynotes/therapynotes-domain-security/)
+- [Therapynotes Vulnerability Disclosure](https://apis.io/security/therapynotes/therapynotes-vulnerability-disclosure/)
 
-## Modeled Capability Areas
+#### Plans and pricing (1)
 
-These are the logical surfaces a behavioral-health EHR API would expose. They are modeled for completeness only - **TherapyNotes publishes no endpoints or base URL for any of them.**
+Published plans, tiers and prices.
 
-### TherapyNotes Clients API (Modeled)
+- [Therapynotes Plans Pricing](https://apis.io/plans/therapynotes/therapynotes-plans-pricing/)
 
-Client (patient) roster - demographics, contacts, insurance, and portal enrollment. Available only in the web application.
+## Where to find this API
 
-### TherapyNotes Scheduling API (Modeled)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-Appointments, recurring schedules, and reminders. Native one-way calendar sync to Google Calendar, Outlook, and iCloud exists in-app, but there is no programmatic scheduling API.
-
-### TherapyNotes Clinical Documentation API (Modeled)
-
-Interactive clinical note templates - intake, progress notes, treatment plans, psychiatry documentation. PHI-bearing data available only inside the HIPAA-gated application.
-
-### TherapyNotes Billing and Claims API (Modeled)
-
-Medical billing - electronic insurance claims, ERA, superbills, and integrated card processing - run through an internal clearinghouse workflow in-app. No billing API is exposed.
-
-## Pricing
-
-TherapyNotes sells per-clinician platform subscriptions (not API plans). Captured 2026-07-10:
-
-- **Solo:** $69 / clinician / month
-- **Group:** $79 first clinician / month, $50 per additional clinician / month, unlimited non-clinical users
-- **Enterprise:** Same rates as Group, minimum 30 users, dedicated account manager
-- **Add-ons:** Electronic claims $0.14/claim, ERA $0.14/ERA, Premium Telehealth $15/clinician/month, TherapyFuel AI Scribe $40/provider/month
-- **Free trial:** 30 days
-
-See [plans/therapynotes-plans-pricing.yml](plans/therapynotes-plans-pricing.yml). Confirm current figures at [therapynotes.com/pricing](https://www.therapynotes.com/pricing/).
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/therapynotes-llc)
 - [Website](https://www.therapynotes.com)
 - [Documentation](https://support.therapynotes.com/hc/en-us)
-- [Plans](plans/therapynotes-plans-pricing.yml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 9.3** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 9.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/therapynotes/](https://apis.io/providers/therapynotes/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for TherapyNotes: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/therapynotes/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
